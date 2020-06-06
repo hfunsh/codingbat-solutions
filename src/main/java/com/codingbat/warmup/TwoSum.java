@@ -40,4 +40,22 @@ public class TwoSum {
        throw new IllegalArgumentException("Target sum does not exist");
    }
 
+
+    public int[] twoSumMap(int[] nums, int target) {
+
+        Map<Integer, Integer> map = new Hashmap <Integer, Integer>();
+        int [] results = new int[2];
+
+        for(int x = 0; x < nums.length; x++){
+            if(map.containsValue(target - nums[x])){
+                results[1] = x;
+                results[0] = map.get(target - nums[x]);
+
+                map.put(x, nums[x]);
+            }
+        }
+        return results[];
+    }
+
+
 }
